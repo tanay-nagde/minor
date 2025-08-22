@@ -15,8 +15,13 @@ export default function SignupPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await signup({ fullName, username, email, password }); // send all fields
-    if (!res.error) navigate("/dashboard");
+    try {
+      const res = await signup({ fullName, username, email, password }).unwrap(); // send all fields
+      console.log(res); // res is now your response data
+      navigate("/dashboard"); // always works if signup succeeds
+    } catch (err) {
+      console.error("Signup failed:", err);
+    }
   };
 
   return (

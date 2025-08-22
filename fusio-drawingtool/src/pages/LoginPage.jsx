@@ -12,12 +12,16 @@ export default function LoginPage() {
   const [login, { isLoading, error }] = useLoginMutation();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await login({ username, email, password }); // Include username
-    console.log(res)
-    if (!res.error) navigate("/dashboard");
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await login({ username, email, password }).unwrap(); // unwrap
+    console.log(res); // res is now your response data
+    navigate("/dashboard"); // always works if login succeeds
+  } catch (err) {
+    console.error("Login failed:", err);
+  }
+};
 
   return (
     <div className="min-h-screen bg-zinc-950 text-purple-400 flex items-center justify-center px-4">
