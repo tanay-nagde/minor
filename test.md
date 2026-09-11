@@ -370,7 +370,7 @@
 370. The handwriting was familiar.
 371. It said to return home.
 372. The bicycle was taken again.
-373. The road looked ordinary.
+
 374. The town returned to normal.
 375. The sun began setting.
 376. Shadows stretched across the street.
