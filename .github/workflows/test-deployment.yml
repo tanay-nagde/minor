@@ -1,0 +1,13 @@
+name: Test Deployment Event
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+jobs:
+  fake-deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - run: echo "pretending to deploy"
