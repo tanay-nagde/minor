@@ -37,7 +37,7 @@
 37. A delivery truck stopped outside.
 38. A package was placed by the door.
 39. The box was surprisingly light.
-40. Nobody knew what was inside.
+40. changing line 40
 41. The hallway smelled like fresh paint.
 42. A picture hung slightly crooked.
 43. The frame was made of wood.
